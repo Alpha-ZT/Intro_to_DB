@@ -1,0 +1,9 @@
+SELECT COLUMN_NAME AS Column_Name,
+       COLUMN_TYPE AS Data_Type,
+       IS_NULLABLE AS Is_Nullable,
+       COLUMN_KEY AS Key_Type,
+       COLUMN_DEFAULT AS Default_Value,
+       EXTRA AS Extra
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Books'
+  AND TABLE_SCHEMA = DATABASE();
